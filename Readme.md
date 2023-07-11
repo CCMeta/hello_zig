@@ -5,4 +5,5 @@
 - build static lib: zig build-lib .\src\main.zig
 - build dynamic lib: zig build-lib .\src\main.zig -dynamic
 - build with C: zig build-exe .\hello.zig -lc 
+- translate C file: zig translate-c .\test.c -lc > test.zig
 ```
