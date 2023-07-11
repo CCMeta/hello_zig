@@ -2,7 +2,7 @@ const std = @import("std");
 const c = @cImport({
     // See https://github.com/ziglang/zig/issues/515
     @cDefine("_NO_CRT_STDIO_INLINE", "1");
-    @cInclude("stdio.h");
+    @cInclude("test.h");
 });
 
 pub fn main() !void {
@@ -19,7 +19,7 @@ pub fn main() !void {
     try stdout.print("Run `zig build test` to run the tests.\n", .{});
 
     try bw.flush(); // don't forget to flush!
-
+    _ = c.test1(1);
     _ = c.printf("hello\n");
 }
 
