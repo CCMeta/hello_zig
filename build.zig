@@ -25,8 +25,8 @@ pub fn build(b: *std.Build) void {
     });
     // ------------------------------------------
     exe.linkLibC();
-    exe.addIncludePath("include");
-    exe.addCSourceFile("include/test.c", &.{});
+    // exe.addIncludePath("include");
+    // exe.addCSourceFile("include/test.c", &.{});
     // ------------------------------------------
 
     // This declares intent for the executable to be installed into the
